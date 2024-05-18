@@ -68,7 +68,9 @@
 								<!-- {/* scroll left */} -->
 
 								<div
-									class="absolute bottom-0 left-5 top-0 z-10 flex cursor-pointer items-center"
+									id="scroll-left"
+									class="hidden absolute bottom-0 left-5 top-0 z-10 cursor-pointer items-center"
+									onclick="handleClickLeft()"
 								>
 									<svg
 										width="25"
@@ -96,8 +98,9 @@
 								</div>
 								<!-- {/* more stories... */} -->
 
-								<div
+								<div id="scroll-right"
 									class="absolute bottom-0 right-5 top-0 z-10 flex cursor-pointer items-center"
+									onclick="handleClickRight()"
 								>
 									<!-- arrowRight -->
 									<svg
@@ -153,19 +156,12 @@
 							</button>
 						</div>
 
-						<div class="flex my-3 cursor-pointer">
-							<img
-								src="public/images/avatar.png"
-								width="44px"
-								height="44px"
-								alt=""
-								class="rounded-full"
-							/>
-							<p class="flex items-center mx-4 text-sm">username</p>
-							<button class="ml-auto text-xs font-medium text-instaBlue">
-								Follow
-							</button>
+						<div id="suggested-accounts">
+
 						</div>
+
+						
+						
 
 						<div class="my-5 flex">
 							<ul class="flex list-none flex-wrap text-xs text-gray-500">
