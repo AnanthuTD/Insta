@@ -82,10 +82,10 @@ const STORIES = [
 		image: "public/zuck/1.jpg",
 	},
 	{
-		username: "ananthu_td",
-		avatar: "public/ananthu_td/avatar.jpg",
+		username: "_ananthu_td_",
+		avatar: "public/ananthutd/avatar.jpg",
 		name: "Ananthu T D",
-		image: "public/ananthu_td/1.jpg",
+		image: "public/ananthutd/1.jpg",
 	},
 	{
 		username: "emmawatson",
@@ -115,10 +115,10 @@ const STORIES = [
 		image: "public/zuck/1.jpg",
 	},
 	{
-		username: "ananthu_td",
-		avatar: "public/ananthu_td/avatar.jpg",
+		username: "_ananthu_td_",
+		avatar: "public/ananthutd/avatar.jpg",
 		name: "Ananthu T D",
-		image: "public/ananthu_td/1.jpg",
+		image: "public/ananthutd/1.jpg",
 	},
 	{
 		username: "leomessi",
