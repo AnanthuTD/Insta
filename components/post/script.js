@@ -28,15 +28,17 @@ const unLiked = `<svg
 					</svg>
 `;
 
-let like = false;
-
-const likeNode = document.getElementById("like");
-
-likeNode.addEventListener("click", () => {
-   like = !like;
-	if (!like) likeNode.innerHTML = unLiked;
-	else likeNode.innerHTML = liked;
-});
+const handleLike = (event) => {
+	const id = event.currentTarget.id;
+	const likeNode = document.getElementById(id);
+	if (likeNode.getAttribute("data-state") === "false") {
+		likeNode.setAttribute("data-state", "true");
+		likeNode.innerHTML = liked;
+	} else {
+		likeNode.setAttribute("data-state", "false");
+		likeNode.innerHTML = unLiked;
+	}
+};
 
 const savedIcon = `<svg
 aria-label="Save"
@@ -76,14 +78,39 @@ width="24"
    stroke-linejoin="round"
    stroke-width="2"
 ></polygon>
-</svg>`
+</svg>`;
 
+const handleSave = (event) => {
+	const id = event.currentTarget.id;
+	const likeNode = document.getElementById(id);
+	if (likeNode.getAttribute("data-state") === "false") {
+		likeNode.setAttribute("data-state", "true");
+		likeNode.innerHTML = savedIcon;
+	} else {
+		likeNode.setAttribute("data-state", "false");
+		likeNode.innerHTML = unSavedIcon;
+	}
+};
 
-const saveNode = document.getElementById("save");
-let saved = false;
+const handlePostComment = (event) => {
+	const id = event.target.id;
+	let postBtnId = id.split("-")[2];
 
-saveNode.addEventListener("click", () => {
-   saved =!saved;
-   if (!saved) saveNode.innerHTML = unSavedIcon;
-   else saveNode.innerHTML = savedIcon;
-})
+	const postBtn = document.getElementById("post-comment-btn-" + postBtnId);
+
+	if (event.target.value) postBtn.style.display = "block";
+	else postBtn.style.display = "none";
+};
+
+const handleFollow = (event) => {
+	console.log(event.target.id);
+	const id = event.target.id;
+	const followBtn = document.getElementById(id);
+	if (followBtn.getAttribute("data-state") === "false") {
+		followBtn.setAttribute("data-state", "true");
+		followBtn.innerHTML = "Following";
+	} else {
+		followBtn.setAttribute("data-state", "false");
+		followBtn.innerHTML = "Follow";
+	}
+};

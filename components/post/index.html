@@ -41,7 +41,9 @@
 						</div>
 					</div>
 					<div class="flex flex-col">
-						<span class="text-sm font-semibold text-primaryText">
+						<span
+							class="text-sm font-semibold text-primaryText text-[14px]"
+						>
 							username
 						</span>
 						<span class="text-xs text-[rgb(245,245,245)] font-normal"
@@ -49,18 +51,37 @@
 						>
 					</div>
 				</div>
+				<div>
+					<svg
+						aria-label="Verified"
+						class="x1lliihq x1n2onr6"
+						fill="rgb(0, 149, 246)"
+						height="12"
+						role="img"
+						viewBox="0 0 40 40"
+						width="12"
+					>
+						<title>Verified</title>
+						<path
+							d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z"
+							fill-rule="evenodd"
+						></path>
+					</svg>
+				</div>
 				<span
 					class="rounded-full"
 					style="width: 5px; height: 5px; background-color: gray"
 				></span>
-				<span class="text-xs" style="color: gray"> 6d </span>
+				<span class="text-xs hover:cursor-pointer" style="color: gray">
+					6d
+				</span>
 				<span
 					class="rounded-full"
 					style="width: 5px; height: 5px; background-color: gray"
 				></span>
-				<a href="" class="text-[#008fec] text-sm font-medium">Follow</a>
+				<div id="follow" data-state="false" onclick="handleFollow(event)" href="" class="text-[#008fec] text-sm font-medium">Follow</div>
 			</div>
-			<div class="">
+			<div class="hover:cursor-pointer">
 				<span>
 					<svg
 						aria-label="More Options"
@@ -101,8 +122,8 @@
 	<footer class="w-full space-y-2">
 		<div class="flex items-center justify-between w-full">
 			<div class="flex gap-2">
-				<div id="like">
-               <!-- initial unLiked -->
+				<div id="like" data-state="false" onclick="handleLike(event)">
+					<!-- initial unLiked -->
 					<svg
 						aria-label="Like"
 						color="rgb(142, 142, 142)"
@@ -170,7 +191,7 @@
 					</svg>
 				</div>
 			</div>
-			<div id="save">
+			<div id="save" data-state="false" onclick="handleSave(event)">
 				<svg
 					aria-label="Save"
 					class="x1lliihq x1n2onr6 x5n08af"
@@ -194,18 +215,20 @@
 		</div>
 
 		<div class="flex cursor-pointer gap-1 text-sm">
-			<span>Liked by</span>
-			<span class="cursor-pointer font-bold"> username </span>
-			<span>and 74 others</span>
+			<span class="font-semibold">229,269 likes</span>
 		</div>
 		<div class="flex items-center">
 			<input
+            id="input-comment" 
 				type="text"
 				class="w-full border-none bg-transparent text-sm outline-none"
 				placeholder="Add a comment..."
+				oninput="handlePostComment(event)"
 			/>
 			<div class="flex cursor-pointer gap-2 justify-center items-center">
-				<span class="text-xs font-bold text-brightBlue"> POST </span>
+				<span id="post-comment" class="hidden text-xs font-bold text-brightBlue">
+					POST
+				</span>
 
 				<svg
 					aria-label="Emoji"
