@@ -35,16 +35,16 @@ const ACCOUNTS = [
 		image: "public/cristiano/1.jpg",
 	},
 	{
-		username: "_zuck_",
-		avatar: "public/_zuck_/avatar.jpg",
+		username: "zuck",
+		avatar: "public/zuck/avatar.jpg",
 		name: "Mark Zuckerberg",
-		image: "public/_zuck_/1.jpg",
+		image: "public/zuck/1.jpg",
 	},
 	{
-		username: "_ananthu_td_",
-		avatar: "public/_ananthu_td_/avatar.jpg",
+		username: "ananthu_td",
+		avatar: "public/ananthu_td/avatar.jpg",
 		name: "Ananthu T D",
-		image: "public/_ananthu_td_/1.jpg",
+		image: "public/ananthu_td/1.jpg",
 	},
 	{
 		username: "emmawatson",
