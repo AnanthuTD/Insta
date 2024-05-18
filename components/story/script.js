@@ -76,10 +76,10 @@ const STORIES = [
 		image: "public/cristiano/1.jpg",
 	},
 	{
-		username: "zuck",
-		avatar: "public/zuck/avatar.jpg",
+		username: "_zuck_",
+		avatar: "public/_zuck_/avatar.jpg",
 		name: "Mark Zuckerberg",
-		image: "public/zuck/1.jpg",
+		image: "public/_zuck_/1.jpg",
 	},
 	{
 		username: "_ananthu_td_",
@@ -109,10 +109,10 @@ const STORIES = [
 		image: "public/cristiano/1.jpg",
 	},
 	{
-		username: "zuck",
-		avatar: "public/zuck/avatar.jpg",
+		username: "_zuck_",
+		avatar: "public/_zuck_/avatar.jpg",
 		name: "Mark Zuckerberg",
-		image: "public/zuck/1.jpg",
+		image: "public/_zuck_/1.jpg",
 	},
 	{
 		username: "_ananthu_td_",
