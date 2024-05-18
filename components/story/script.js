@@ -83,9 +83,9 @@ const STORIES = [
 	},
 	{
 		username: "_ananthu_td_",
-		avatar: "public/ananthutd/avatar.jpg",
+		avatar: "public/ananthu/avatar.jpg",
 		name: "Ananthu T D",
-		image: "public/ananthutd/1.jpg",
+		image: "public/ananthu/1.jpg",
 	},
 	{
 		username: "emmawatson",
@@ -116,9 +116,9 @@ const STORIES = [
 	},
 	{
 		username: "_ananthu_td_",
-		avatar: "public/ananthutd/avatar.jpg",
+		avatar: "public/ananthu/avatar.jpg",
 		name: "Ananthu T D",
-		image: "public/ananthutd/1.jpg",
+		image: "public/ananthu/1.jpg",
 	},
 	{
 		username: "leomessi",
