@@ -1,27 +1,36 @@
 function setScrollRight(bool) {
+	const scrollRight = document.getElementById("scroll-right");
+	
 	if (bool) {
-		document.getElementById("scroll-right").style.display = "flex";
+		// Remove the hidden class and add the lg:flex class
+		scrollRight.classList.remove("hidden");
+		scrollRight.classList.add("flex");
 	} else {
-		document.getElementById("scroll-right").style.display = "none";
+		// Add the hidden class and remove the lg:flex class
+		scrollRight.classList.add("hidden");
+		scrollRight.classList.remove("flex");
 	}
 }
+
 
 function setScrollLeft(bool) {
+	const scrollLeft = document.getElementById("scroll-left");
+	
 	if (bool) {
-		document.getElementById("scroll-left").style.display = "flex";
+		// Remove the hidden class and add the lg:flex class
+		scrollLeft.classList.remove("hidden");
+		scrollLeft.classList.add("flex");
 	} else {
-		document.getElementById("scroll-left").style.display = "none";
+		// Add the hidden class and remove the lg:flex class
+		scrollLeft.classList.add("hidden");
+		scrollLeft.classList.remove("flex");
 	}
 }
 
-setScrollRight(false);
-
-setScrollLeft(false);
 
 function handleClickLeft() {
 	const container = document.getElementById("scroll-container");
 	const containerWidth = container?.getBoundingClientRect().width || 0;
-	const contentWidth = container?.scrollWidth || 0;
 	const scrollAmount = containerWidth / 2;
 
 	if (container && container.scrollLeft !== 0) {
@@ -29,7 +38,9 @@ function handleClickLeft() {
 
 		setScrollRight(true);
 
-		if (Math.round(container.scrollLeft + containerWidth) >= contentWidth) {
+		const scrollLeft = container.scrollLeft - scrollAmount;
+
+		if (Math.floor(scrollLeft)<=0) {
 			setScrollLeft(false);
 		}
 	}
@@ -46,7 +57,9 @@ function handleClickRight() {
 
 		setScrollLeft(true);
 
-		if (Math.round(contentWidth - container.scrollLeft) === contentWidth) {
+		const scrollLeft = container.scrollLeft + scrollAmount;
+
+		if (Math.round(containerWidth + scrollLeft) >= contentWidth) {
 			setScrollRight(false);
 		}
 	}
@@ -56,7 +69,10 @@ function check() {
 	const container = document.getElementById("scroll-container");
 	const containerWidth = container?.getBoundingClientRect().width || 0;
 	const contentWidth = container?.scrollWidth || 0;
-
+	const scrollRight = document.getElementById("scroll-right");
+	if (window.getComputedStyle(scrollRight).display === "none") {
+		return;
+	}
 	if (container && contentWidth > containerWidth) {
 		setScrollRight(true);
 	}
@@ -100,8 +116,6 @@ const STORIES = [
 		image: "public/therock/1.jpg",
 	},
 
-
-
 	{
 		username: "cristiano",
 		avatar: "public/cristiano/avatar.jpg",
@@ -138,6 +152,43 @@ const STORIES = [
 		name: "Emma Watson",
 		image: "public/emmawatson/1.jpg",
 	},
+	{
+		username: "emmawatson",
+		avatar: "public/emmawatson/avatar.jpg",
+		name: "Emma Watson",
+		image: "public/emmawatson/1.jpg",
+	},
+	{
+		username: "therock",
+		avatar: "public/therock/avatar.jpg",
+		name: "Dwayne Johnson",
+		image: "public/therock/1.jpg",
+	},
+
+	{
+		username: "cristiano",
+		avatar: "public/cristiano/avatar.jpg",
+		name: "Cristiano Ronaldo",
+		image: "public/cristiano/1.jpg",
+	},
+	{
+		username: "zuck",
+		avatar: "public/zuck/avatar.jpg",
+		name: "Mark Zuckerberg",
+		image: "public/zuck/1.jpg",
+	},
+	{
+		username: "_ananthu_td_",
+		avatar: "public/ananthu/avatar.jpg",
+		name: "Ananthu T D",
+		image: "public/ananthu/1.jpg",
+	},
+	{
+		username: "leomessi",
+		avatar: "public/leomessi/avatar.jpg",
+		name: "Leo Messi",
+		image: "public/leomessi/1.jpg",
+	},
 ];
 
 async function loadStories() {
@@ -156,9 +207,9 @@ async function loadStories() {
 	}
 
 	// 1 millisecond delay to wait for the scroll-container to be visible
-	setTimeout(()=>{
+	setTimeout(() => {
 		check();
-	}, 1)
+	}, 1);
 }
 
 loadStories();
