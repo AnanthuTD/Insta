@@ -24,39 +24,39 @@ function loadScript(url) {
 const ACCOUNTS = [
 	{
 		username: "leomessi",
-		avatar: "public/leomessi/avatar.jpg",
+		avatar: "public/leomessi/avatar.avif",
 		name: "Leo Messi",
-		image: "public/leomessi/1.jpg",
+		image: "public/leomessi/1.avif",
 	},
 	{
 		username: "cristiano",
-		avatar: "public/cristiano/avatar.jpg",
+		avatar: "public/cristiano/avatar.avif",
 		name: "Cristiano Ronaldo",
-		image: "public/cristiano/1.jpg",
+		image: "public/cristiano/1.avif",
 	},
 	{
 		username: "zuck",
-		avatar: "public/zuck/avatar.jpg",
+		avatar: "public/zuck/avatar.avif",
 		name: "Mark Zuckerberg",
-		image: "public/zuck/1.jpg",
+		image: "public/zuck/1.avif",
 	},
 	{
 		username: "_ananthu_td_",
-		avatar: "public/ananthu/avatar.jpg",
+		avatar: "public/ananthu/avatar.avif",
 		name: "Ananthu T D",
-		image: "public/ananthu/1.jpg",
+		image: "public/ananthu/1.avif",
 	},
 	{
 		username: "emmawatson",
-		avatar: "public/emmawatson/avatar.jpg",
+		avatar: "public/emmawatson/avatar.avif",
 		name: "Emma Watson",
-		image: "public/emmawatson/1.jpg",
+		image: "public/emmawatson/1.avif",
 	},
 	{
 		username: "therock",
-		avatar: "public/therock/avatar.jpg",
+		avatar: "public/therock/avatar.avif",
 		name: "Dwayne Johnson",
-		image: "public/therock/1.jpg",
+		image: "public/therock/1.avif",
 	},
 ];
 
